@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Quiz Page</title>
+</head>
+<body>
+    <h1><center>Interactive Quiz App</center></h1>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <div class="timer-container">
+            <div id="timer">Time Left: 20</div>
+        </div>        
+        <div id="question-container" class="fade-in-animation">
+            <p id="question"></p>
+            <ul id="options"></ul>
+        </div>
+        <div class="button-container">
+        <button id="next-button">Next</button>
+        </div>
+        <p id="feedback"></p>
+        <p id="feed"></p>
+        <p id="score"></p>
+        <button id="refresh-button">Retake Test</button>
+        <button id="show-wrong-answers-button">Review Answers</button>
+    </div>
+
+    <div class="wrong-answers-container" style="display: none;">
+        <ul id="wrong-answers-list"></ul>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
