@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.quiz-container{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #57c800;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#question {
+    font-weight: bold; /* Add this line to make the question text bold */
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+/* Add styles for the wrong answers container */
+.wrong-answers-container {
+    max-width: 750px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff; /* Background color for the container */
+    border: 1px solid #dc3545; /* Border color for the container */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #dc3545; /* Red color for wrong answers title */
+}
+
+/* Style the wrong answers list items */
+.wrong-answers-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.wrong-answers-container li {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #dc3545; /* Border color for wrong answers */
+    border-radius: 5px;
+    background-color: #f8d7da; /* Background color for wrong answers */
+}
+
+/* Style the text inside the wrong answers list items */
+.wrong-answers-container li strong {
+    font-weight: bold;
+    color: #28a745; /* Text color for the correct answer */
+}
+
+.wrong-answers-container li strong:nth-child(2) {
+    color: #333; /* Text color for the user's answer */
+}
+
+.wrong-answers-container li strong:nth-child(3) {
+    color: #dc3545; /* Red color for strong text */
+}
+
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h1 center {
+    font-size: 35px;
+    background-color: #007BFF; /* Background color for the highlighted area */
+    color: white; /* Text color for the highlighted area */
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004196;
+    transform: scale(0.95); /* Add a slight click effect */
+}
+
+#feedback,#feed {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #28a745; /* Green for correct, you can change this color */
+}
+
+#feedback.incorrect {
+    color: #dc3545; /* Red for incorrect */
+}
+
+/* Add a style for the "time-up" class */
+#feedback.time-up {
+    color: #dc3545; /* Red color for "Time's up!" */
+}
+
+#score {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ff0000;
+}
+
+#next-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
+
+#next-button:active {
+    background-color: #004196;
+    transform: scale(0.95);
+}
+
+li.selected {
+    background-color: #d3d3d3; /* Change the background color for selected option */
+}
+
+
+/* Add styles for square radio boxes */
+ul.square-checkboxes {
+    padding-left: 0;
+}
+
+li.square-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.square-checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.square-checkbox input[type="radio"] {
+    display: none; /* Hide the default radio input */
+}
+
+.square-checkbox .checkbox-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.square-checkbox input[type="radio"]:checked + .checkbox-icon::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #007BFF;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style the text of the options */
+.square-checkbox label span {
+    font-size: 16px; /* Change the font size of the options */
+    color: #333; /* Change the text color of the options */
+}
+
+/* Add hover effect to the options */
+.square-checkbox:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+}
+
+/* Add a selected style for the options */
+.square-checkbox input[type="radio"]:checked + .checkbox-icon {
+    border-color: #28a745; /* Change the border color for selected options */
+}
+
+.square-checkbox input[type="radio"]:checked + .checkbox-icon::before {
+    background-color: #28a745; /* Change the background color for selected options */
+}
+
+
+#question-container {
+    text-align: left; /* Align questions to the left */
+    margin-bottom: 20px; /* Add some spacing between questions and options */
+}
+
+
+
+/* Style for the Submit button */
+.button-container button:first-child {
+    background-color: #4CAF50; /* Green background color for Submit button */
+    color: white; /* White text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Add padding to the button */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-left: 10px;
+}
+
+/* Style for the buttons on hover */
+.button-container button:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+
+/* CSS code */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in-animation {
+    animation: fadeIn 0.8s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+/* Style for the button container */
+.button-container {
+    margin-top: 20px; /* Add some spacing between options and buttons */
+    display: flex; /* Use flexbox to align buttons side by side */
+    justify-content: space-between; /* Add space between buttons */
+    margin-right: 10%;
+    margin-left: 50%;
+}
+
+.button-container button {
+    flex: 1; /* Make buttons take up equal width within the container */
+    margin-right: 10px; /* Add spacing between buttons */
+}
+
+
+/* Style for selected correct option with a light green background */
+li.selected-correct {
+    background-color: #d4edda; /* Light green background color for selected correct option */
+}
+
+/* Style for selected incorrect option with a light red background */
+li.selected-incorrect {
+    background-color: #f8d7da; /* Light red background color for selected incorrect option */
+}
+
+
+/* Style for the timer element */
+#timer {
+    text-align: right;
+    font-weight: bold; /* Add bold font-weight */
+    transition: color 0.5s ease; /* Add a smooth color transition */
+}
