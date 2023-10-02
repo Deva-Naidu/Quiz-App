@@ -15,6 +15,7 @@ Your folder structure should look like this:
     - styles.css
     - script.js
   - index.html
+
 Step 3: Open the Quiz in a Web Browser
 To run the quiz, open the index.html file in a web browser. You can do this by:
 
