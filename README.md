@@ -16,7 +16,10 @@ Your folder structure should look like this:
     - script.js
   - index.html
 
-Step 3: Open the Quiz in a Web Browser
+
+Step 3: 
+
+Open the Quiz in a Web Browser
 To run the quiz, open the index.html file in a web browser. You can do this by:
 
 Right-clicking on index.html and selecting "Open with" and choosing your preferred web browser (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).
